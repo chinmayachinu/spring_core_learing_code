@@ -1,0 +1,5 @@
+package com.infinite.springcore.collections;
+
+public class Employee {
+
+}

@@ -1,0 +1,29 @@
+package com.infinite.springcore.constructorinjection;
+
+public class Addition {
+
+	//This is an example to get clarified with the ambiguity problem
+	private int a;
+	private int b;
+	public Addition(int a, int b) {
+		super();
+		this.a = a;
+		this.b = b;
+	}
+	
+	public Addition(double a , double b) {
+		this.a= (int) a;
+		this.b=(int) b;
+	}
+	
+	public Addition(String a , String b) {
+		this.a=Integer.parseInt(a);
+		this.b=Integer.parseInt(b);
+	}
+	
+	public void doSum() {
+		System.out.println("a =" + a);
+		System.out.println("b =" + b);
+		System.out.println("Addition = "+ (a+b));
+	}
+}

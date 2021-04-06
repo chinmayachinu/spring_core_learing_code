@@ -1,0 +1,7 @@
+package com.infinite.springcore.configuration;
+
+public class Person {
+	public void doRead() {
+		System.out.println(" Yes I'm reading ");
+	}
+}

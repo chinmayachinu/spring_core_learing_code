@@ -1,0 +1,5 @@
+package com.infinite.springcore.standalone.collections;
+
+public class Person {
+
+}

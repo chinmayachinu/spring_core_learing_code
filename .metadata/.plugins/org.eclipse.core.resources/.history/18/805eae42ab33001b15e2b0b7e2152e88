@@ -1,0 +1,57 @@
+package com.infinite.springcore.stereotype;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component("per")
+public class Person {
+
+	@Value(value = "2")
+	private int id;
+	@Value(value = "chinmaya")
+	private String name;
+	
+	private String languages;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getLanguages() {
+		return languages;
+	}
+
+	public void setLanguages(String languages) {
+		this.languages = languages;
+	}
+
+	@Override
+	public String toString() {
+		return "Person [id=" + id + ", name=" + name + ", languages=" + languages + "]";
+	}
+
+	public Person() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Person(int id, String name, String languages) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.languages = languages;
+	}
+	
+}

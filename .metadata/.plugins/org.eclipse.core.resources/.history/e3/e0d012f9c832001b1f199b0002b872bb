@@ -1,0 +1,5 @@
+package com.infinite.springcore.constructorinjection;
+
+public class Person {
+
+}

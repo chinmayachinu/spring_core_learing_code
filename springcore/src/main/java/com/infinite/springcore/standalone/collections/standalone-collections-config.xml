@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+     http://www.springframework.org/schema/util
+     http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- Added util schema namespace to the <beans> element -->
+
+	<!-- standalone collections -->
+	<util:list list-class="java.util.LinkedList" id="list1">
+		<value>chinmaya</value>
+		<value>sandeep</value>
+		<value>lipu</value>
+		<value>tinka</value>
+		<value>avisek</value>
+	</util:list>
+	<util:map map-class="java.util.HashMap" id="map1">
+		<entry key="1" value="c" />
+		<entry key="2" value="java" />
+		<entry key="3" value="javascript" />
+		<entry key="4" value="python" />
+	</util:map>
+	<util:set set-class="java.util.HashSet" id="set1">
+		<value>tenth</value>
+		<value>plustwo</value>
+		<value>engineering</value>
+	</util:set>
+
+	<bean
+		class="com.infinite.springcore.standalone.collections.Person"
+		name="person">
+		<property name="friends" ref="list1" />
+		<property name="languages" ref="map1" />
+		<property name="education" ref="set1" />
+	</bean>
+</beans>

@@ -1,0 +1,5 @@
+package com.infinite.springcore.autowire;
+
+public class Address {
+
+}
